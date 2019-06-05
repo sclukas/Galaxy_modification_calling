@@ -16,7 +16,8 @@ nmcli dev show | grep DNS
 ```
 Copy the nameserver and add it to the resolv.conf file. You can find the file in the /etc directory.
 Add "nameserver <xx.xx.xxx.x>" and save the file (this might require root rights).
-**The resolv.conf file resets after every restart. If you have to install programs from the Toolshed you have to add the nameserver again**
+
+**Warning: The resolv.conf file resets after every restart. If you have to install programs from the Toolshed you have to add the nameserver again**
 
 ## Setup
 Enter your Galaxy-folder and open a terminal within the directory.
