@@ -1,3 +1,0 @@
-sudo docker build -t galaxy-helm setup
-sudo ./run.sh
-http://localhost:8080
