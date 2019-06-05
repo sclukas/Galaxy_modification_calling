@@ -31,7 +31,7 @@ A fresh instance of the created image can now be started using the startup scrip
 ```
 sudo ./run.sh
 ```
-You may have to make the file (run.sh) executable.
+You may have to make the file (run.sh) executable. Rightclick on the file, select 'Permissions' then tick the box 'Execute: Allow executing file as program'.
 
 The docker image and the Galaxy instance require about 11 gigabytes of memory.
 After a short startup period, the Galaxy instance should be accessible via <http://localhost:8080>.
