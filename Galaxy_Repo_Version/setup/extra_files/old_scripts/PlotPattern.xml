@@ -1,0 +1,14 @@
+<tool id="PlotPattern" name="PlotPattern">
+    <description></description>
+    <command interpreter="python">PlotPattern.py $input $output $startinterval $endinterval</command>
+
+    <inputs>
+        <param format="txt" name="input" type="data" label="Positional_Table" help="Positional Table" />
+	<param format="" name="startinterval" type="integer" value="1" label="Starting Interval" help="Starting position for visualization" />
+	<param format="" name="endinterval" type="integer" value="1000" label="Ending Interval" help="Ending position for visualization" />
+    </inputs>
+
+    <outputs>
+        <data format="png" name="output" />
+    </outputs>
+</tool>

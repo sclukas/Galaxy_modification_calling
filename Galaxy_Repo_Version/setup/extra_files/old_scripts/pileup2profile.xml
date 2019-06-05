@@ -1,0 +1,10 @@
+<tool id="pileup2profile" name="Pileup2Profile">
+    <description></description>
+    <command interpreter="python">pileup2profile.py $input $output</command>
+    <inputs>
+        <param format="pileup" name="input" type="data" label="Pileup file" help="" />
+    </inputs>
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

@@ -1,0 +1,10 @@
+<tool id="Pileup2ProfileV5" name="Pileup2ProfileV5">
+    <description>Extracts relevant information by position from the Pileup.</description>
+    <command interpreter="python">Pileup2ProfileV5.py $input $output</command>
+    <inputs>
+        <param format="pileup" name="input" type="data" label="Pileup file" help="" />
+    </inputs>
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

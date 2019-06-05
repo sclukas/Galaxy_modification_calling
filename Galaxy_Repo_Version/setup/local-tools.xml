@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<toolbox>
+	<section id="candidates" name="Candidate selection">
+		<tool file="/local-tools/tools/Annotate_Candidates_V2.xml" />
+		<tool file="/local-tools/tools/OverhangTrimming_V3.xml" />
+		<tool file="/local-tools/tools/Pileup2ProfileV5.xml" />
+		<tool file="/local-tools/tools/Profile2CandidatesV3.xml" />
+		<tool file="/local-tools/tools/myConcat.xml" />
+		<tool file="/local-tools/tools/GalaxyRandomForest_V3.xml" />
+		<tool file="/local-tools/tools/AnnotateProfile.xml" />
+		<tool file="/local-tools/tools/PredictModifications.xml" />
+		<tool file="/local-tools/tools/FilterByBase.xml" />
+		<tool file="/local-tools/tools/PlotPattern_V3.xml" />
+		<tool file="/local-tools/tools/Get_Predictions.xml" />
+		<tool file="/local-tools/tools/Get_Known_Modifications_Galaxy.xml"/>
+		<tool file="/local-tools/tools/Demethylation_relative_change_Galaxy.xml"/>
+	</section>
+</toolbox>

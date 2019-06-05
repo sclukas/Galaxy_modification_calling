@@ -1,0 +1,13 @@
+<tool id="GetPredictions" name="GetPredictions">
+    <description>Writes the results of the prediction in two output files, one for each class in the binary classification.</description>
+    <command interpreter="python">Get_Predictions.py $input $output_mod $output_non_mod</command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Annotated profile containing predictions" />
+    </inputs>
+
+    <outputs>
+	<data format="csv" name="output_mod" />
+	<data format="csv" name="output_non_mod" />
+    </outputs>
+</tool>

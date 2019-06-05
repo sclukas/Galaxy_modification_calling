@@ -1,0 +1,24 @@
+<tool id="GalaxyRandomForest_V3" name="GalaxyRandomForest_V3">
+    <description>Machine learning algorithm for binary classification. This script expects two annotated files as input, one containing instances of the positive class (e.g 'm1A'), the other containing instances of the negative class (e.g 'nonm1A'). Produces two outputs: the trained random forest model and a file containing evaluation scores.</description>
+    <command interpreter="python">GalaxyRandomForest_V3.py $input1 $input2 $statistics $trained_forest $number_of_repetitons $splits_cross_val $number_of_trees $arrest_rate $mismatch_rate $pre_base $amism $cmism $gmism $tmism $jump_rate</command>
+    <inputs>
+        <param format="csv" name="input1" type="data" label="AnnotatedFile_m1A" help="Input containing m1A-candidates in annotated form from first RT" />
+	<param format="csv" name="input2" type="data" label="AnnotatedFile_nonm1A" help="Input containing nonm1A-candidates in annotated form from first RT" />
+	<param format="" name="number_of_repetitons" type="integer" value="10" label="Number of Repetitions" />
+	<param format="" name="splits_cross_val" type="integer" value="3" label="Number of KFold Splits" />
+	<param format="" name="number_of_trees" type="integer" value="50" label="Number of Estimators (Trees)" />
+	<param name="arrest_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use arrest rate as feature for random forest?" />
+	<param name="mismatch_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use mismatch rate as feature for random forest?" />
+	<param name="pre_base" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use pre-base as feature for random forest?" />	
+	<param name="amism" type="boolean" truevalue="yes" falsevalue="no" checked="False" label="Use A-mismatch as feature for random forest?" />
+	<param name="cmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use C-mismatch as feature for random forest?" />
+	<param name="gmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use G-mismatch as feature for random forest?" />
+	<param name="tmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use T-mismatch as feature for random forest?" />
+	<param name="jump_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Use jump rate as feature for random forest?" />
+    </inputs>
+	
+    <outputs>
+        <data format="csv" name="statistics" />
+	<data format="pkl" name="trained_forest" />
+    </outputs>
+</tool>

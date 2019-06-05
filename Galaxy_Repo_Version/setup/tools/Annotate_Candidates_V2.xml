@@ -1,0 +1,13 @@
+<tool id="Annotate_Candidates_V2" name="Annotate_Candidates_V2">
+    <description></description>
+    <command interpreter="python">Annotate_Candidates_V2.py $input $output $modtype </command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="source file" help="source file in which the candidates are located" />
+	<param format="" name="modtype" type="text" value="m1A" help="Name of the modification" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

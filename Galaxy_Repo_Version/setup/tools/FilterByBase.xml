@@ -1,0 +1,14 @@
+<tool id="FilterByBase" name="FilterByBase">
+    <description>Filters the information of a Profile by basetype and writes the respective positions into an output file. </description>
+    <command interpreter="python">FilterByBase.py $input $output $refbase $min_cov</command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Profile to be filtered by the refbase" />
+	<param format="" name="refbase" type="text" value="A" label="Reference base to filter by" />
+	<param format="" name="min_cov" type="integer" value="0" label="Minimum coverage" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

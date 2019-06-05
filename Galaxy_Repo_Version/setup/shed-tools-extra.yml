@@ -1,0 +1,51 @@
+tools:
+
+
+# Bowtie 2
+- name: bowtie2
+  owner: devteam
+  tool_panel_section_label: 'Bowtie 2'
+  revisions:
+  - 017aba02828d
+
+#Cutadapt
+- name: cutadapt
+  owner: lparsons
+  tool_panel_section_label: 'Cutadapt'
+  revisions:
+  - 660cffd8d92a
+
+# SAM tools 
+- name: package_samtools_0_1_19
+  owner: iuc
+  tool_panel_section_label: 'SAM tools'
+  revisions:
+  - c9bd782f5342
+
+# Picard tools 
+- name: picard
+  owner: devteam
+  tool_panel_section_label: 'picard'
+  revisions:
+  - 2a17c789e0a5
+
+# Samtools mpileup
+- name: samtools_mpileup
+  owner: devteam
+  tool_panel_section_label: 'samtools mpileup'
+  revisions:
+  - fa7ad9b89f4a
+
+# Samtools sort
+- name: samtools_sort
+  owner: devteam
+  tool_panel_section_label: 'Sort'
+  revisions:
+  - cab3f8d35989
+
+
+#- name: sam_merge
+#  owner: devteam
+#  tool_panel_section_label: 'SAM tools'
+#  revisions:
+#  - 1977f1637890

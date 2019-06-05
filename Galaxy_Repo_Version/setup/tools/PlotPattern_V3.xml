@@ -1,0 +1,22 @@
+<tool id="PlotPattern_V3" name="PlotPattern_V3">
+    <description>Visualize a sequence of up to 1000 bases. Shows mismatch and arrest patterns</description>
+    <command interpreter="python">PlotPattern_V3.py $input $output $target_reference $startinterval $endinterval $width $height $font_size $line_width $marker_size $show_legend $padding</command>
+
+    <inputs>
+        <param format="txt" name="input" type="data" label="Positional_Table" help="Positional Table" />
+	<param format="" name="target_reference" type="text" label="Name of reference sequence" help="Name of reference sequence (from profile)" />
+	<param format="" name="startinterval" type="integer" value="1" label="Starting Interval" help="Starting position for visualization" />
+	<param format="" name="endinterval" type="integer" value="1000" label="Ending Interval" help="Ending position for visualization" />
+	<param format="" name="width" type="integer" value="1500" label="Width of the graphic" help="This value is given as pixels. Minimum value should be 390, for lower values the graphic can be buggy" />
+	<param format="" name="height" type="integer" value="800" label="Height of the graphic" help="This value is given as pixels. Minimum value should be 195, for lower values the graphic can be buggy" />
+   	<param format="" name="font_size" type="integer" value="12" label="Font size of the letters" help="For big graphics (width=1500 height=800) font size should be set to 12. For graphs smaller than width=450, font size should be set to 7. Adjust to your preference" />
+    	<param format="" name="line_width" type="float" value="2" label="Width of the line showing the arrest rate" help="For big graphics (width=1500 height=800) line width should be set to 3. For graphs smaller than width=450, line width should be set to 1. Adjust to your preference" />
+	<param format="" name="marker_size" type="float" value="50" label="Size of the event markers" help="For big graphics (width=1500 height=800) marker size should be set to 50. For graphs smaller than width=450, font size should be set to 30. Adjust to your preference" />
+	<param name="show_legend" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Show legend?" />
+	<param format="" name="padding" type="float" value="0.06" label="Padding for the sequence  (space between graphic and reference sequence)" help="Should always be below 0.1. 0.06 for smaller graphics. Adjust to your preference" />
+    </inputs>
+
+    <outputs>
+        <data format="png" name="output" />
+    </outputs>
+</tool>

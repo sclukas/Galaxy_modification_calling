@@ -1,0 +1,21 @@
+<tool id="Profile2CandidatesV3" name="Profile2CandidatesV3">
+    <description>Filter out positions by their respective arrest and mismatch rates.</description>
+    <command interpreter="python">Profile2CandidatesV3.py $input $output $output2 $minimum_coverage $minimum_coverage_3p $minimum_relative_mismatch $minimum_arrest_rate $origbase $posmin $posmax $reference_genome </command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Source file for which the candidates should be calculated" />
+		<param format="" name="minimum_coverage" type="integer" value="50" label="Minimum coverage" />
+		<param format="" name="minimum_coverage_3p" type="integer" value="50" label="Minimum coverage (next position)" />
+		<param format="" name="minimum_relative_mismatch" type="float" value="0.05" label="Minimum relative mismatch rate" />
+		<param format="" name="minimum_arrest_rate" type="float" value="0.05" label="Minimum arrest rate" />
+		<param format="" name="origbase" type="text" value="A" label="Reference base" />
+		<param format="" name="posmin" type="integer" value="0" label="Minimum position" />	
+		<param format="" name="posmax" type="integer" value="1000000" label="Maximum position" />
+	<param format="fasta" name="reference_genome" type="data" label="Reference" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+	<data format="csv" name="output2" />
+    </outputs>
+</tool>

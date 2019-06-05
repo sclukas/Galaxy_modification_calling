@@ -1,0 +1,20 @@
+<tool id="GalaxyRandomForest_Triplets" name="GalaxyRandomForest_Triplets">
+    <description></description>
+    <command interpreter="python">GalaxyRandomForest_triplets.py $input1 $input2 $input3 $input4 $input5 $input6 $output $number_of_repetitons $splits_cross_val $number_of_trees </command>
+
+    <inputs>
+        <param format="csv" name="input1" type="data" label="AnnotatedFile_m1A" help="Input containing m1A-candidates in annotated form from first RT" />
+	<param format="csv" name="input2" type="data" label="AnnotatedFile_nonm1A" help="Input containing nonm1A-candidates in annotated form from first RT" />	
+	<param format="csv" name="input3" type="data" label="AnnotatedFile_m1A" help="Input containing m1A-candidates in annotated form from second RT" />
+	<param format="csv" name="input4" type="data" label="AnnotatedFile_nonm1A" help="Input containing nonm1A-candidates in annotated form from second RT" />
+	<param format="csv" name="input5" type="data" label="AnnotatedFile_m1A" help="Input containing m1A-candidates in annotated form from third RT" />
+	<param format="csv" name="input6" type="data" label="AnnotatedFile_nonm1A" help="Input containing nonm1A-candidates in annotated form from third RT" />		
+	<param format="" name="number_of_repetitons" type="integer" value="10" label="Number of Repetitions" />
+	<param format="" name="splits_cross_val" type="integer" value="3" label="Number of KFold Splits" />
+	<param format="" name="number_of_trees" type="integer" value="50" label="Number of Estimators (Trees)" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

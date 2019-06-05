@@ -1,0 +1,17 @@
+<tool id="Demethylation_relative_change" name="Demethylation_relative_change">
+    <description> This algorithm calculates the absolute and relative changes in the mismatch rate between two samples of the same sequence and writes all positions that show change of a certain threshold into a file.</description>
+    <command interpreter="python">Demethylation_relative_change_Galaxy.py $normfile $demeth $output $base $rel_change $abs_change $minimum_coverage</command>
+
+    <inputs>
+        <param format="csv" name="normfile" type="data" label="Profile - untreated data" help="Profile file of the untreated sample." />
+	<param format="csv" name="demeth" type="data" label="Profile - treated data" help="Profile file of the treated sample" />
+	<param format="" name="base" type="text" value="A" label="Nucleobase of interest" help="A,C,G,T" />
+	<param format="" name="rel_change" type="float" value="0.3" label="Threshold for the minimum relative change in the mismatch-rate for the position to be written into the output" help="Example: 30 (%) or 0.3" />
+	<param format="" name="abs_change" type="float" value="0.1" label="Threshold for the minimum absolute change in the mismatch-rate for the position to be written into the output" help="Example: 10 (%) or 0.1" />
+	<param format="" name="minimum_coverage" type="integer" value="30" label="Threshold for the minimum coverage required for the position to be considered and written into the output" help="Example: 30" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

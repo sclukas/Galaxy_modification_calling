@@ -1,0 +1,35 @@
+# Build Environment
+sudo docker build -t galaxy-helm setup
+# Start Galaxy
+sudo ./run.sh
+# User interface
+http://localhost:8080
+
+#List all containers
+sudo docker ps -a
+#Delete container
+sudo docker rm CONTAINER_ID
+#Stop container
+docker stop CONTAINER_NAME
+
+#List images
+sudo docker image ls
+#Remove Docker image
+sudo docker rmi IMAGE_ID
+sudo docker info
+
+#Restart docker (free port)
+sudo service docker restart
+
+#restart Galaxy without restarting the container
+sudo docker exec <container name> supervisorctl restart galaxy:
+
+#Start shell in docker
+sudo docker exec -it "id of running container" bash
+
+#Find nameserver
+nmcli dev show | grep DNS
+
+#Install Docker
+sudo snap install docker
+

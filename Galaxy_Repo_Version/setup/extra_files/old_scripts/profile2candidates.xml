@@ -1,0 +1,23 @@
+<tool id="Profile2Candidates" name="Profile2Candidates">
+    <description></description>
+    <command interpreter="python">profile2candidates.py $input $output $origbase $visual_range $minimum_coverage $minimum_coverage_3p $minimum_relative_mismatch $minimum_arrest_rate $minimum_diversity $min_rh6 $posmin $posmax $excludepositions</command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Source file for which the candidates should be calculated" />
+		<param format="" name="visual_range" type="integer" value="5" label="Visual range" help="Determines how many neighbors on both sides of each base should be taken into account for the RH6 score (size of the sliding window: 1 + 2 * visual range)" />
+		<param format="" name="minimum_coverage" type="integer" value="10" label="Minimum coverage" />
+		<param format="" name="minimum_coverage_3p" type="integer" value="20" label="Minimum coverage (next position)" />
+		<param format="" name="minimum_relative_mismatch" type="float" value="0.05" label="Minimum relative mismatch rate" />
+		<param format="" name="minimum_arrest_rate" type="float" value="0.05" label="Minimum arrest rate" />
+		<param format="" name="minimum_diversity" type="integer" value="0" label="Minimum diversity" />
+		<param format="" name="min_rh6" type="float" value="0" label="Minimum RH6 score" />
+		<param format="" name="origbase" type="text" value="A" label="Reference base" />
+		<param format="" name="posmin" type="integer" value="0" label="Minimum position" />	
+		<param format="" name="posmax" type="integer" value="1000000" label="Maximum position" />	
+		<param format="" name="excludepositions" type="text" label="Excluded positions" help="Positions to be excluded from the candidate list (comma-separated values)" optional="true" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

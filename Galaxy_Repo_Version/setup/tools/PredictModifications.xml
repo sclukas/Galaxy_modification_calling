@@ -1,0 +1,23 @@
+<tool id="PredictModifications" name="PredictModifications">
+    <description>Makes a prediction on a given input file. Expects a trained random forest model as input.</description>
+    <command interpreter="python">PredictModifications.py $input $input2 $forestSaveFile $output $mod_type $arrest_rate $mismatch_rate $pre_base $amism $cmism $gmism $tmism $jump_rate</command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="annotated Profile" help="Annotated profile file on which to make the prediction " />
+	<param format="csv" name="input2" type="data" label="Profile" help="Profile file needed to create the output" />
+	<param format="pkl" name="forestSaveFile" type="data" label="Random Forest pkl" help="Save file containing the trained random forest model"/>
+	<param format="" name="mod_type" type="text" value="m1A" label="Name of the modification of interest" />
+	<param name="arrest_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was arrest rate used as feature for random forest?" />
+	<param name="mismatch_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was mismatch rate used as feature for random forest?" />
+	<param name="pre_base" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was pre-base used as feature for random forest?" />	
+	<param name="amism" type="boolean" truevalue="yes" falsevalue="no" checked="False" label="Was A-mismatch used as feature for random forest?" />
+	<param name="cmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was C-mismatch used as feature for random forest?" />
+	<param name="gmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was G-mismatch used as feature for random forest?" />
+	<param name="tmism" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was T-mismatch used as feature for random forest?" />
+	<param name="jump_rate" type="boolean" truevalue="yes" falsevalue="no" checked="True" label="Was jump rate used as feature for random forest?" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>

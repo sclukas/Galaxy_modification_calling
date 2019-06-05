@@ -1,0 +1,13 @@
+<tool id="AnnotatedCandidates" name="Annotate Candidates">
+    <description></description>
+    <command interpreter="python">annotateCandidates.py $input $output $base </command>
+
+    <inputs>
+        <param format="candidates" name="input" type="data" label="source file" help="source file for which the candidates should be calculated" />
+		<param format="" name="base" type="text" value="A" label="base" />
+    </inputs>
+
+    <outputs>
+        <data format="annotatedCandidates" name="output" />
+    </outputs>
+</tool>

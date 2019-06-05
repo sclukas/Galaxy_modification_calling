@@ -1,0 +1,15 @@
+<tool id="Get_Known_Modifications" name="Get_Known_Modifications">
+    <description> This scripts extracts known modifications from a Profile. It requires as input a tab separated file containing the name of the reference sequence and the position within the reference for each modification (1 instance per line)</description>
+    <command interpreter="python">Get_Known_Modifications_Galaxy.py $modfile $profile $output1 $output2 $mod_base</command>
+
+    <inputs>
+        <param format="csv" name="modfile" type="data" label="Modification file" help="Tab-separated file containing modified sites." />
+	<param format="csv" name="profile" type="data" label="Profile" help="Profile file" />
+	<param format="" name="mod_base" type="text" value="A" label="Nucleobase of interest" help="A,C,G,T Base which the modification is derived from. Example: A for m1A" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output1" />
+	<data format="csv" name="output2" />
+    </outputs>
+</tool>

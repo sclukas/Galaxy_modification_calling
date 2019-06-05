@@ -1,0 +1,10 @@
+<tool id="overhangtrimming" name="Overhangtrimming">
+    <description></description>
+    <command interpreter="python">overhangtrimming.py $input $output </command>
+    <inputs>
+        <param format="pileup" name="input" type="data" label="Pileup file" help="pileup file from which overhangs are trimmed" />
+    </inputs>
+    <outputs>
+        <data format="pileup" name="output" />
+    </outputs>
+</tool>

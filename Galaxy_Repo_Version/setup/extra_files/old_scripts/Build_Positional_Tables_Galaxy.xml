@@ -1,0 +1,13 @@
+<tool id="Build_Positional_Tables_Galaxy" name="Build Positional Tables">
+    <description></description>
+    <command interpreter="python">Build_Positional_Tables_Galaxy.py $input $output $ref_seq</command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Filtered profile for which to predict modifications " />
+	<param format="" name="ref_seq" type="text" label="Name of reference sequence" help="Name of reference sequence (from profile)" />
+    </inputs>
+
+    <outputs>
+        <data format="txt" name="output" />
+    </outputs>
+</tool>

@@ -1,0 +1,13 @@
+<tool id="AnnotateProfile" name="AnnotateProfile">
+    <description></description>
+    <command interpreter="python">AnnotateProfile.py $input $output $Base_of_interest </command>
+
+    <inputs>
+        <param format="csv" name="input" type="data" label="Profile" help="Filtered profile for which to predict modifications " />
+	<param format="" name="Base_of_interest" type="text" value="A" help="Capital letter for the nucleobase of interest (A,C,G,T)" />
+    </inputs>
+
+    <outputs>
+        <data format="csv" name="output" />
+    </outputs>
+</tool>
