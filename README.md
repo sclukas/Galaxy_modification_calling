@@ -47,23 +47,39 @@ That's it! You can now upload your data and create workflows (or import existing
 
 
 ### List all containers
+```
 sudo docker ps -a
-# Delete container
+```
+### Delete container
+```
 sudo docker rm CONTAINER_ID
-# Stop container
+```
+### Stop container
+```
 docker stop CONTAINER_NAME
-
-# List images
+```
+### List images
+```
 sudo docker image ls
-# Remove Docker image
+```
+### Remove Docker image
+```
 sudo docker rmi IMAGE_ID
+```
+```
 sudo docker info
-
-# Restart docker (free port)
+```
+### Restart docker (free port)
+```
 sudo service docker restart
+```
 
-# restart Galaxy without restarting the container
+### restart Galaxy without restarting the container
+```
 sudo docker exec <container name> supervisorctl restart galaxy:
+```
 
-# Start shell in docker
+### Start shell in docker
+```
 sudo docker exec -it "id of running container" bash
+```
