@@ -1,6 +1,5 @@
-# Galaxy_modification_calling
+# Galaxy Helm Modification Calling
 
-# Galaxy - Helm pipeline
 Galaxy Docker image for RNA analysis and modification calling.
 
 ## Requirements
