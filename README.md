@@ -46,7 +46,7 @@ That's it! You can now upload your data and create workflows (or import existing
 ## Additional useful commands
 
 
-# List all containers
+### List all containers
 sudo docker ps -a
 # Delete container
 sudo docker rm CONTAINER_ID
