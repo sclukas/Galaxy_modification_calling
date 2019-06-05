@@ -28,6 +28,7 @@ sudo docker build -t galaxy-helm setup
 
 ## Run Galaxy
 A fresh instance of the created image can now be started using the startup script:
+
 **Note: You may have to make the file (run.sh) executable. Rightclick on the file, select 'Permissions' then tick the box 'Execute: Allow executing file as program'.**
 ```
 sudo ./run.sh
