@@ -2,6 +2,9 @@
 
 Galaxy Docker image for RNA analysis and modification calling.
 
+## Download
+Download Galaxy_modification_calling Repository.
+
 ## Requirements
 Make sure docker is installed on your computer.
 ```
